@@ -133,9 +133,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 File chosenFile = fileList[which];
                 textView.setText(chosenFile.toString());
-                ExtractPackage(chosenFile.toString());
+
                 if (chosenFile.isDirectory()) {
                     showFileListDialog(chosenFile.getAbsolutePath());
+                } else {
+                    //ExtractPackage(chosenFile.toString());
+                    String chosenFileLocation = chosenFile.toString();
+                    String filename = chosenFileLocation.substring(chosenFileLocation.lastIndexOf(File.separator) + 1);
+
+                    String basePackageName = filename.substring(0, filename.indexOf("."));
+
+                    TextView textview1 = (TextView) findViewById(R.id.file_notification);
+                    textview1.setText(basePackageName);
                 }
             }
         });
