@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.example.home.golden_eagle_scroll_test"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -28,4 +28,7 @@ dependencies {
     compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
     compile files('libs/commons-compress-1.12.jar')
+    compile 'com.google.android.gms:play-services:9.4.0'
+
+
 }

@@ -60,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
             requestPermission();
         }
 
+        Button button1 = (Button)findViewById(R.id.to_screen2);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SecondScreenActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
